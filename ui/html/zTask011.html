@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+{{template "block_head"}}
+<body class="bg-gray-100 font-family-karla flex">
+	{{template "block_left_menu"}}
+    <div class="relative w-full flex flex-col h-screen overflow-y-hidden">
+        {{template "block_desktop_header"}}
+        <!-- Desktop Header -->
+        <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
+            <main class="w-full flex-grow p-6">
+                <h1 class="text-3xl text-black pb-6">{{.PageDescribe}}</h1>
+                <h3 class="text-3xl text-black pb-6">{{.PageName}}</h3>
+
+                <!-- Content Start -->
+ 
+                <div class="tab">
+                  <button class="tablinks" onclick="openObj(event, 'Task_18_2_1')">18.2.1</button>
+                  <button class="tablinks" onclick="openObj(event, 'Task_18_4_1')">18.4.1</button>
+                </div>
+
+                <div id="Task_18_2_1" class="tabcontent">
+                  <h3>Задание 18.2.1 (HW-04)</h3>
+                  <p>Создайте программу, которая запускает 5 рутин, каждая из которых печатает свой порядковый номер 10 раз. Добиться такого результата за один вызов wg.Add.</p>
+                  <br>
+                  <div class="relative">
+                    <input type="number" value="10" id="inputPar11" class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-32 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label for="inputPar11" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">maxValue:</label>
+                  </div>
+                  <br>
+                  <div class="relative">
+                    <input type="number" value="5" id="inputPar12" class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-32 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label for="inputPar12" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">numGoroutines:</label>
+                  </div>
+                  <br>
+                  <button type="submit" onclick="startChannel(1)" class="inline-flex items-center w-32 py-2.5 px-4 text-xs font-medium text-center border-gray-200 text-gray-700 bg-gray-200 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-200 hover:bg-blue-100">
+                    Запустить
+                  </button>
+                </div>
+
+                <div id="Task_18_4_1" class="tabcontent">
+                  <h3>Задание 18.4.1 (HW-04)</h3>
+                  <p>Измените приведенный выше код по реализации двоичного семафора так, чтобы он описывал не двоичный семафор, а семафор подсчёта.</p>
+                  <br>
+                  <div class="relative">
+                    <input type="number" value="50" id="inputPar21" class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-32 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label for="inputPar21" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">maxValue:</label>
+                  </div>
+                  <br>
+                  <div class="relative">
+                    <input type="number" value="10" id="inputPar22" class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-32 text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                    <label for="inputPar22" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">numGoroutines:</label>
+                  </div>
+                  <br>
+                  <button type="submit" onclick="startChannel(2)" class="inline-flex items-center w-32 py-2.5 px-4 text-xs font-medium text-center border-gray-200 text-gray-700 bg-gray-200 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-200 hover:bg-blue-100">
+                    Запустить
+                  </button>
+                </div>
+
+                <br>
+                <textarea id="data" class="read-only:bg-gray-100 border border-slate-300 w-full h-full max-h-80 px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" readonly placeholder="Вывод данных..." required></textarea>
+                <br>
+
+                <script>
+                    var eventSource = new EventSource('/dataChannelSema');
+                    var dataElement = document.getElementById('data');
+
+                    eventSource.onmessage = function(event) {
+                        var msg =  dataElement.value;
+                        dataElement.value += event.data + '\r\n';
+                    };
+
+                    function clearData() {
+                      dataElement.value = '';
+                    };
+
+                    function startChannel(channelNum) {
+                      clearData();
+
+                      if (channelNum == 1) {
+                        var inputPar1 = document.getElementById('inputPar11').value;
+                        var inputPar2 = document.getElementById('inputPar12').value;
+                        fetch('/startSema?channel=' + channelNum+'&par1='+inputPar1+'&par2='+inputPar2);
+                      }
+                      else{ 
+                        var inputPar1 = document.getElementById('inputPar21').value;
+                        var inputPar2 = document.getElementById('inputPar22').value;
+                        fetch('/startSema?channel=' + channelNum+'&par1='+inputPar1+'&par2='+inputPar2);  
+                      }
+                    };
+
+                    function openObj(evt, objName) {
+                      var i, tabcontent, tablinks;
+                      tabcontent = document.getElementsByClassName("tabcontent");
+                      for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                      }
+                      tablinks = document.getElementsByClassName("tablinks");
+                      for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                      }
+                      document.getElementById(objName).style.display = "block";
+                      evt.currentTarget.className += " active";
+                    }
+
+
+                </script>
+
+                                
+              
+              <!-- Content End -->
+
+            </main>
+    
+            {{template "block_footer"}}
+        </div>
+    </div>
+    {{template "block_script"}}
+</body>
+</html>
